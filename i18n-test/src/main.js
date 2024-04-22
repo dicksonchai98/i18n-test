@@ -1,4 +1,3 @@
-import './assets/main.css'
 import EN from './locale/en.json'
 import CH from './locale/ch.json'
 import { createApp } from 'vue'
@@ -20,7 +19,7 @@ app.mount('#app')
 const productsStore = useCounterStore()
 
 const i18n = createI18n({
-  // something vue-i18n options here ...
+  //讀取pinia上面的language的value
   locale: productsStore.locale,
   messages: {
     EN: EN,
