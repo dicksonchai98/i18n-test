@@ -9,7 +9,7 @@ l
     </select>
     <h1>{{ $t('title') }}</h1>
 
-    <select v-model="sortOrder" @change="sortTasks">
+    <select v-model="sortOrder">
       <option value="default">Default</option>
       <option value="a-z">Name (A-Z)</option>
       <option value="z-a">Name (Z-A)</option>
@@ -94,11 +94,6 @@ const sortedTasks = computed(() => {
 
   return sorted
 })
-
-const sortTasks = () => {
-  // Trigger reactivity by changing sortOrder value
-  sortOrder.value = sortOrder.value
-}
 </script>
 
 <style scoped>
